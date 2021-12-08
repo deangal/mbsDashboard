@@ -1,8 +1,9 @@
 # mbsDashboard
 
 # npm install
+```
 npm i @mui/icons-material @mui/material axios body-parser cors express react react-redux redux redux-persist redux-devtools-extension react-router-dom 
-
+```
 # scripts 
 ```
 "scripts": {
