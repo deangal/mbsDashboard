@@ -12,7 +12,7 @@ function App() {
 
   
 
-let client = new w3cwebsocket("ws://localhost:8080");
+let client = new w3cwebsocket("ws://34.255.200.10:8080");
 client.onopen = console.log("React Connected to 8080");
 
 
@@ -31,7 +31,7 @@ client.onopen = console.log("React Connected to 8080");
 
  let dateInterval = setInterval(function() {
     dispatch(GET_DATE())
-    },360000)
+    },60000 * 60)
 
 // post
 client.onmessage = message => {

@@ -41,7 +41,6 @@ export const orderSlice = createSlice({
   reducers: {
     POST_ORDER: (state:any,action:any) => {
         let newState = [...state.data,action.payload]
-        console.log(`POST ${newState}`);
         state.data = newState
         state.loading = false
         state.error = ''
@@ -53,7 +52,6 @@ export const orderSlice = createSlice({
         const putState = [...state.data]
         let putId = putState.findIndex(item => item.id === orderId)
         putState[putId] = action.payload
-        console.log(`PUT ${putState}`);
         
         state.data = putState
         state.loading = false
