@@ -20,7 +20,7 @@ var deleteBody = "";
 
 app.post('/post',function(req,res) {
     postBody = req.body;
-     eventEmitter.emit('onPost',JSON.stringify(req.body),'mbs')
+     eventEmitter.emit('onPost',JSON.stringify(req.body),' mbs')
      res.status(200).send('OK')
 
 
@@ -29,7 +29,7 @@ app.post('/post',function(req,res) {
 //put eventEmiter
 app.post('/put',function(req,res) {
     putBody = req.body;
-    eventEmitter.emit('onPut',JSON.stringify(putBody),'mbs')
+    eventEmitter.emit('onPut',JSON.stringify(req.body),' mbs')
     res.status(200).send('OK')
 
 
@@ -38,7 +38,7 @@ app.post('/put',function(req,res) {
 //delete eventEmiter
 app.post('/delete',function(req,res) {
     deleteBody = req.body;
-    eventEmitter.emit('onDelete',JSON.stringify(deleteBody),'mbs')
+    eventEmitter.emit('onDelete',JSON.stringify(req.body),' mbs')
     res.status(200).send('OK')
 
 

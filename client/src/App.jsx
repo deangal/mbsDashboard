@@ -38,15 +38,15 @@ client.onmessage = message => {
 let msgData = message.data.split(", ");
 console.log(msgData);
 if(msgData[2] == 'post'){
-  // dispatch(POST_ORDER(JSON.parse(msgData[0])))
+  dispatch(POST_ORDER(JSON.parse(msgData[0])))
   }
 
   if(msgData[2] == 'put'){
-    // dispatch(PUT_ORDER(JSON.parse(msgData[0])))
+  dispatch(PUT_ORDER(JSON.parse(msgData[0])))
   }
   
   if(msgData[2] == 'delete'){
-    // dispatch(DELETE_ORDER(JSON.parse(msgData[0])))
+  dispatch(DELETE_ORDER(JSON.parse(msgData[0])))
   }
 }
 

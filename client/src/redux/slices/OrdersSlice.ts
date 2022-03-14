@@ -40,7 +40,7 @@ export const orderSlice = createSlice({
   initialState,
   reducers: {
     POST_ORDER: (state:any,action:any) => {
-        let newState = [...state,action.payload]
+        let newState = [...state.data,action.payload]
         console.log(`POST ${newState}`);
         state.data = newState
         state.loading = false
