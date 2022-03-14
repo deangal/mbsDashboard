@@ -1,0 +1,63 @@
+html{
+  background-color: rgba(221, 221, 221, 0.671);
+  overflow: hidden;
+}
+body{
+  margin: 0;
+}
+.App {
+  text-align: center;
+  height: 100vh;
+}
+
+.firstLine{
+  height: 33vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* gap: 15px; */
+}
+
+.secondLine{
+  height: 33vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* gap: 15px; */
+}
+
+.thirdLine{
+  height: 33vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* gap: 15px; */
+}
+
+#mbs{
+  border:  black 3px solid;
+  background-color: rgb(110, 179, 202);
+}
+
+#hesed{
+  background-color: rgb(254,184,102);
+  border:  black 3px solid;
+
+
+}
+
+#citysal{
+border: rgb(34, 56, 87) 6px solid;
+}
+
+.length{
+  font-size: 80px;
+  font-weight: 600;
+}
+
+
+
+
