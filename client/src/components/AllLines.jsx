@@ -1,5 +1,5 @@
 import React,{useEffect} from 'react'
-import { FirstLine} from './compnentsIndex'
+import { FirstLine, SecondLine, ThirdLine } from './compnentsIndex'
 
 import { useDispatch } from "react-redux";
 
@@ -14,8 +14,8 @@ export default function AllLines() {
     return (
         <>
         <FirstLine />
-        {/* <SecondLine/>
-        <ThirdLine/>   */}
+        <SecondLine/>
+        <ThirdLine/>  
         </>
     )
 }
