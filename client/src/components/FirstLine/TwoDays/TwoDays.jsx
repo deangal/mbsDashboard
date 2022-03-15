@@ -7,7 +7,7 @@ import { dateSlicer } from '../../../utils';
 
 import { useSelector,useDispatch } from "react-redux";
 
-export default function TwoDays({filter,domain}) {
+export default function TwoDays() {
   
   let [active, setActive] = useState([false,false,false]);
   let [didMount, setDidMount] = useState(false);
@@ -115,7 +115,7 @@ let filterStyles = {
 }
   
     return (
-      <Card onClick={() => console.log(filteredMbsOrders)} id={'mbs'} sx={filter ? filterStyles : firstLine}>
+      <Card onClick={() => console.log(filteredMbsOrders)} id={'mbs'} sx={firstLine}>
       <CardContent style={{height:'30%'}}>
           
           <Typography style={{display:'flex',justifyContent:'center',alignItems:'center'}} variant="h4" component="div">

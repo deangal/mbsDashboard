@@ -7,7 +7,7 @@ import { useSelector,useDispatch } from "react-redux";
 import { dateSlicer } from '../../../utils';
 
 
-export default function Today({filter}) {
+export default function Today() {
 
   
   let [active, setActive] = useState([false,false,false]);
@@ -116,7 +116,7 @@ let filterStyles = {
 }
 
   return (
-    <Card onClick={() => console.log(filteredMbsOrders)} id={'mbs'} sx={filter ? filterStyles : firstLine}>
+    <Card onClick={() => console.log(filteredMbsOrders)} id={'mbs'} sx={firstLine}>
       <CardContent style={{height:'30%'}}>
         
         <Typography style={{display:'flex',justifyContent:'center',alignItems:'center'}} variant="h4" component="div">
