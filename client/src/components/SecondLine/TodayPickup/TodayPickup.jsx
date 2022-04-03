@@ -15,8 +15,10 @@ export default function TodayPickup({filter}) {
   
   const dispatch = useDispatch();
 
-let filteredMbsOrders = MbsOrdersData.filter(element => element.status == 'orderpickupready');
-
+  let filteredPickupMbsOrders = MbsOrdersData.filter(element => element.delivery_type == 'pickup');
+  let filteredMbsOrders = filteredPickupMbsOrders.filter(element =>  element.status == 'orderinpackage');
+  
+  
 
 
   
