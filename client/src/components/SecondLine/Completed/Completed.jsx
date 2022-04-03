@@ -3,20 +3,29 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import AddIcon from '@mui/icons-material/Add';
-
+import { stringToDate } from '../../../utils';
 import { useSelector,useDispatch } from "react-redux";
 
-export default function Unfound({filter}) {
+export default function Completed({filter}) {
  
   let [active, setActive] = useState([false,false,false]);
 
-    const MbsOrdersData = useSelector((state) => state.MbsOrders.data);
-
+  const MbsOrdersData = useSelector((state) => state.MbsOrders.data);
+  let today = useSelector((state) => state.date.today);
 
   const dispatch = useDispatch();
 
-  let filteredMbsOrders = MbsOrdersData.filter(element => element.status == 'couldnt-find-you');
- 
+
+  let nullFilterMbs = MbsOrdersData.filter(element => 
+    (element.delivery_date != null) 
+  ); 
+    
+  let filteredTodayMbsOrders = nullFilterMbs.filter(element => stringToDate(element.delivery_date).setHours(0,0,0,0) == stringToDate(today).setHours(0,0,0,0));
+  let filteredMbsOrders = filteredTodayMbsOrders.filter(element => 
+  (( element.status == 'sucssefulydeliver' || element.status == 'orderpickupready' ) ) 
+  );
+  
+    
   
   
   //Load Data
@@ -71,8 +80,8 @@ let filterStyles = {
       <CardContent style={{height:'30%'}}>
         
         <Typography style={{display:'flex',justifyContent:'center',alignItems:'center'}} variant="h4" component="div">
-<AddIcon  /* onClick={addHandle} */ style={addStyle}/>
-         הזמנות שלא נמצאה להן הכתובת
+{/* <AddIcon   onClick={addHandle} style={addStyle}/> */}
+         הזמנות שהושלמו היום
         </Typography>
         
         </CardContent>

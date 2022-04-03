@@ -120,7 +120,8 @@ let filterStyles = {
       <CardContent style={{height:'30%'}}>
         
         <Typography style={{display:'flex',justifyContent:'center',alignItems:'center'}} variant="h4" component="div">
-        <AddIcon  id="today" style={addStyle}/>הזמנות להיום
+        {/* <AddIcon  id="today" style={addStyle}/> */}
+        הזמנות להיום
         </Typography >
         
         </CardContent>

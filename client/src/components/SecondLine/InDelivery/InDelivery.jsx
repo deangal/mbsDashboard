@@ -110,7 +110,8 @@ let filterStyles = {
       <CardContent style={{height:'30%'}}>
         
         <Typography style={{display:'flex',justifyContent:'center',alignItems:'center'}} variant="h4" component="div">
-        <AddIcon /* onClick={addHandle} */ style={addStyle}/> הזמנות שכרגע בשליחות
+        {/* <AddIcon  onClick={addHandle}  style={addStyle}/>  */}
+        משלוחים שכרגע בשליחות
         </Typography>
         
         </CardContent>

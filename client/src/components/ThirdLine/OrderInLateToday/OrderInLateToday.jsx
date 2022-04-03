@@ -75,7 +75,7 @@ let filterStyles = {
       <CardContent style={{height:'30%'}}>
         
         <Typography style={{display:'flex',justifyContent:'center',alignItems:'center'}} variant="h4" component="div">
-        <AddIcon  /* onClick={addHandle} */ style={addStyle}/>
+        {/* <AddIcon   onClick={addHandle}  style={addStyle}/> */}
         סך ההזמנות באיחור היום
         </Typography>
         

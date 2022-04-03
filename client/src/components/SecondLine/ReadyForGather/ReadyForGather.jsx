@@ -75,8 +75,8 @@ let filterStyles = {
       <CardContent style={{height:'30%'}}>
         
         <Typography style={{display:'flex',justifyContent:'center',alignItems:'center'}} variant="h4" component="div">
-<AddIcon  /* onClick={addHandle} */ style={addStyle}/>
-         הזמנות מוכנות לליקוט
+{/* <AddIcon  onClick={addHandle}  style={addStyle}/> */}
+         הזמנות לליקוט
         </Typography>
         
         </CardContent>

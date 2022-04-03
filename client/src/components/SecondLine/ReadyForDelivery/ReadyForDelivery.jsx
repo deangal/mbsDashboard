@@ -15,8 +15,8 @@ export default function ReadyForDelivery({filter}) {
 
   const dispatch = useDispatch();
 
-
-  let filteredMbsOrders = MbsOrdersData.filter(element => element.status == 'orderinpackage');
+  let filteredDeliveryMbsOrders = MbsOrdersData.filter(element => element.delivery_type == 'delivery');
+  let filteredMbsOrders = filteredDeliveryMbsOrders.filter(element => element.status == 'orderinpackage');
 
   
   
@@ -73,8 +73,8 @@ let filterStyles = {
       <CardContent style={{height:'30%'}}>
         
         <Typography style={{display:'flex',justifyContent:'center',alignItems:'center'}} variant="h4" component="div">
-        <AddIcon /* onClick={addHandle} */ style={addStyle}/>
-הזמנות מוכנות למשלוח
+        {/* <AddIcon  onClick={addHandle}  style={addStyle}/> */}
+משלוחים מוכנים למשלוח
         </Typography>
         
       </CardContent>
